@@ -55,7 +55,7 @@ function Users() {
                         ))}
                 </ul>
 
-                <Button><img alt="seta" src={Arrow}> Voltar </img> </Button>
+                <Button><img alt="seta" src={Arrow}/> Voltar </Button>
 
             </ContainerItens>
         </Container>
