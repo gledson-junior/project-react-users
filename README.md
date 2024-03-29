@@ -1,3 +1,14 @@
+<h1>Projeto lista de usuários React</h1>
+<br>
+<p>Esse projeto foi feito em aula e utiliza do framework React para construir um sistema de cadastro de usuários e listagem deles em outra página, o usuário podera navegar entre as página clicando no botão e podendo ver a lista de usuários cadastrados e voltar para a página de cadastro.</p>
+<br>
+<h2>Tecnologias utilizadas no projeto:</h2>
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
+<h2>Imagens do projeto</h2>
+<img src="https://github.com/gledson-junior/project-react-users/blob/master/src/assets/76507.png">
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
