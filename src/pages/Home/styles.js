@@ -1,5 +1,7 @@
 import styled from "styled-components"
 import Background1 from "../../assets/Background1.svg"
+import { Link } from 'react-router-dom';
+
 
 export const Container = styled.div`
     background: url("${Background1}");
@@ -10,33 +12,12 @@ export const Container = styled.div`
     gap: 40px;
     height: 100vh;
     overflow: hidden;
+    height: 100vh;
+    min-height: 100vh;
 `;
 export const Image = styled.img`
     margin-top: 30px;
 `;
-
-export const ContainerItens = styled.div`
-    border-radius: 61px 61px 0px 0px;
-    background: linear-gradient(157.44deg, 
-        rgba(255, 255, 255, 0.60) 0.84%,
-        rgba(255, 255, 255, 0.60) 0.85%, 
-        rgba(255, 255, 255, 0.15) 100%);
-    padding: 50px 36px;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-`;
-
-export const H1 = styled.h1`
-    color: #FFF;
-    text-align: center;
-    font-size: 34px;
-    font-style: normal;
-    font-weight: bold;
-    line-height: 40px;
-    margin-bottom: 80px;
-`;
-
 export const InputLabel = styled.p`
     color: #EEE;
     font-size: 18px;
@@ -66,44 +47,27 @@ export const Input = styled.input`
     
     color: #FFF;
 `;
+export const A = styled(Link)`
 
-export const Button = styled.button`
-    width: 342px;
-    height: 74px;
-    margin-top: 140px;
-    
-    
-    background: rgba(46, 50, 90, 0.80);
-    border-radius: 14px;
-    border: none;
-
-    font-style: normal;
-    font-weight: bold;
-    font-size: 17px;
-    line-height: 28px;
-
-    color: #FFF;
-    
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    color: white;
+    font-size: bold;
+    text-align: center;
+    margin-top: 25px;
+    width: 150px;
+    margin-left: 100px;
     
     &:hover{
 
-        opacity: 0.8;
+    opacity: 0.8;
+    transform: scale(1.5);
+    transition: 0.5s
 
-    }
+}
 
     &:active{
-        opacity: 0.5;
-        background-color: pink;
-    }
-    
+    opacity: 0.5;
+    background-color: pink;
+}
+
+
 `;
-
-
-
-

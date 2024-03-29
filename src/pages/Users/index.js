@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from 'react';
-
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import Avatar from "../../assets/Avatar.svg";
 import Arrow from "../../assets/Arrow.svg";
 import Trash from '../../assets/Trash.svg';
-
-import {
-    Container,
-    Image,
-    H1,
-    ContainerItens,
-    Button,
-    User
-} from './styles';
+import H1 from '../../components/Title'
+import ContainerItens from '../../components/ContainerItens';
+import Button from  '../../components/Button'
+import { Container, Image, User } from './styles';
 
 
 
@@ -20,7 +15,7 @@ import {
 function Users() {
 
     const [users, setUsers] = useState([]);
-
+    const navigate = useNavigate()
 
     useEffect(() => {
         async function fetchUsers() {
@@ -28,20 +23,25 @@ function Users() {
             setUsers(listUsers)
         }
         fetchUsers()
-    }, [])
+    }, [users])
 
     async function deleteUser(userId) {
         await axios.delete(`http://localhost:3001/users/${userId}`)
         const newUser = users.filter((user) => user.id !== userId)
 
         setUsers(newUser)
+        
+    }
+
+    function myHistory(){
+        navigate('/')
     }
     return (
         <Container>
 
             <Image alt='Logo-image' src={Avatar} />
 
-            <ContainerItens>
+            <ContainerItens isBlur={true}>
 
                 <H1>Usuários</H1>
 
@@ -55,7 +55,7 @@ function Users() {
                         ))}
                 </ul>
 
-                <Button><img alt="seta" src={Arrow}/> Voltar </Button>
+                <Button Back={true} onClick={myHistory}><img alt="seta" src={Arrow} /> Voltar </Button>
 
             </ContainerItens>
         </Container>
